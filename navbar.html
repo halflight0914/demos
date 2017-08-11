@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>导航栏</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    .navbar {
+      width: 600px;
+      margin: 0 auto;
+    }
+
+    .btn {
+      list-style: none;
+      color: #000000;
+      background-color: #f1f1f1;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+      padding: 0;
+    }
+
+    .btn > li {
+      float: left;
+      position: relative;
+    }
+
+    .btn::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    .btn li a {
+      text-decoration: none;
+      display: block;
+      padding: 8px 16px;
+      color: #333333;
+    }
+
+    .btn li a:hover {
+      color: #000000;
+      background-color: #cccccc;
+    }
+
+    .children {
+      color: #000000;
+      background-color: #ffffff;
+      display: none;
+      position: absolute;
+      width: 100px;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    .btn > li:hover .children {
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <ul class="btn">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">作品</a></li>
+      <li>
+        <a href="">更多</a>
+        <div class="children">
+          <a href="#">Git Hub</a>
+          <a href="#">blog</a>
+          <a href="#">知乎</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
