@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>两栏布局</title>
+  <style>
+
+  .aside {
+    color: #ffffff;
+    text-align: center;
+    width: 200px;
+    min-height: calc(100vh - 16px);
+    float: right;
+    background-color: #ea4335;
+  }
+
+  .main {
+    color: #000000;
+    text-align: center;
+    min-height: calc(100vh - 16px);
+    margin-right: 208px;
+    background-color: #fbbc05;
+  }
+  </style>
+</head>
+<body>
+  <div class="aside">
+    右侧固定宽度200px
+  </div>
+  <div class="main">
+    左侧自适应宽度
+  </div>
+</body>
+</html>

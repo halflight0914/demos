@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>风景列表</title>
+  <style>
+
+  ul,li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .layout {
+    width: 920px;
+    margin: 0 auto;
+  }
+
+  .layout h1 {
+    color: #666666;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #666666;
+  }
+
+  .container .picture {
+    float: left;
+    list-style: none;
+    margin: 30px 0 0 10px;
+  }
+
+  .container {
+    margin-left: -10px;
+  }
+
+  .container::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .picture {
+    width: 300px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5)
+  }
+
+  .picture > img {
+    width: 100%;
+  }
+
+  .picture .detail {
+    padding: 2px 15px;
+  }
+  
+  .detail p {
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <h1>风景列表</h1>
+    <ul class="container">
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+      <li class="picture">
+        <img src="https://i.loli.net/2017/08/12/598f0fbb4d439.jpg" alt="the_deep_place_by_madbaek-danqghs.jpg" title="the_deep_place_by_madbaek-danqghs.jpg" />
+        <div class="detail">
+          <p>风景如画</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

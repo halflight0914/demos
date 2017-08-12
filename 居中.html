@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>居中</title>
+  <style>
+    .inline-m1 {
+      width: 200px;
+      text-align: center;
+      border: 1px solid #000000;
+    }
+
+    .block-m1 {
+      width: 150px;
+      height: 50px;
+      background-color: #ea4335;
+      margin: 0 auto;
+    }
+
+    .float-m1 {
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width:fit-content;
+      height: 100px;
+      margin:30px auto;
+      background-color: #ea4335;
+    }
+
+    .son1 {
+      width: 150px;
+      background-color: #4285f4;
+      float: left;
+    }
+
+    .block-m2 {
+      height: 100px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son2 {
+      width: 100px;
+      background-color: #4285f4;
+      position:absolute;
+      left:50%;
+      transform:translate(-50%,0);
+    }
+ 
+    .block-m3 {
+      height: 100px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son3 {
+      position: absolute;
+      left: 50%;
+      width: 150px;
+      margin-left:-75px;
+      background-color: #4285f4;
+    }
+
+    .block-m4 {
+      height: 100px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son4 {
+      position: absolute;
+      width: 300px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: #4285f4;
+    }
+
+    .vertical-m1 {
+      height: 150px;
+      width: 300px;
+      background-color: #ea4335;
+    }
+
+    .vertical-m1 > p {
+      line-height: 150px;
+    }
+
+    .vertical-m2 {
+      height: 150px;
+      width: 300px;
+      margin-top: 30px;
+      background-color: #ea4335;
+    }
+
+    .son5 {
+      background-color: #4285f4;
+      display: inline-block;
+      padding: 10px;
+      vertical-align: middle;
+    }
+
+    .vertical-m2::after {
+      display: inline-block;
+      vertical-align: middle;
+      content: '';
+      height: 100%;
+    }
+
+    .vertical-m3 {
+      height: 150px;
+      width: 300px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      display: table;
+    }
+
+    .son6 {
+      height: 50px;
+       display: table-cell; 
+      vertical-align: middle;
+      background-color: #4285f4;
+    }
+
+    .vertical-m4 {
+      height: 150px;
+      width: 300px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son7 {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      transform: translate(0%,-50%);
+    }
+
+    .vertical-m5 {
+      height: 150px;
+      width: 300px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son8 {
+      position: absolute;
+      top: 50%;
+      height: 50px;
+      line-height: 50px;
+      margin-top: -25px; 
+      background-color: #4285f4;
+    }
+
+    .vertical-m6 {
+      height: 150px;
+      width: 300px;
+      margin-top: 30px;
+      background-color: #ea4335;
+      position: relative;
+    }
+
+    .son9 {
+      height: 50px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background-color: #4285f4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>水平居中</h1>
+
+  <div class="inline-m1">
+    <span>行内元素水平居中1</span>
+  </div>
+
+  <div class="block-m1">
+    <p>块级元素设置margin水平居中<p>
+  </div>
+  
+  <div  class="float-m1">
+    <div class="son1">
+      子元素包含浮动水平居中
+    </div>
+  </div>
+
+  <div class="block-m2">
+    <div class="son2">
+      <p>transform</p>
+    </div>
+  </div>
+
+  <div class="block-m3">
+    <div class="son3">
+      <p>绝对定位+负值margin-left</p>
+    </div>
+  </div>
+
+  <div class="block-m4">
+    <div class="son4">
+      <p>绝对定位+left:0;right:0;margin:0 auto;</p>
+    </div>
+  </div>
+
+  <h1>垂直居中</h1>
+
+  <div class="vertical-m1">
+    <p>单行文本垂直居中line-height=height</p>
+  </div>
+
+  <div class="vertical-m2">
+    <span class="son5">
+      行内块级元素+伪元素
+    </span>
+  </div>
+
+  <div class="vertical-m3">
+    <span class="son6">
+      父元素display:table;子元素display:table-cell
+    </span>
+  </div>
+
+  <div class="vertical-m4">
+    <span class="son7">
+      transform
+    </span>
+  </div>
+
+  <div class="vertical-m5">
+    <span class="son8">绝对定位+负值margin-top</span>
+  </div>
+
+  <div class="vertical-m6">
+    <span class="son9">绝对定位+top、bottom:0;margin:auto 0;</span>
+  </div>
+</body>
+</html>
