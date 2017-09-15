@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS操作class</title>
+  <style>
+    .box {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #000000;
+    }
+    .box.active {
+      color: #ffffff;
+      background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+      <h1>颠倒黑白</h1>
+      <p>Hello World</p>
+  </div>
+  <button id="add">添加</button>
+  <button id="remove">删除</button>
+  <button id="toggle1">切换1</button>
+  <button id="toggle2">切换2</button>
+  <script>
+    var addBtn = document.querySelector('#add')
+    var removeBtn = document.querySelector('#remove')
+    var toggle1Btn = document.querySelector('#toggle1')
+    var toggle2Btn = document.querySelector('#toggle2')
+    var box = document.querySelector('.box')
+    addBtn.onclick = function(){
+      box.classList.add('active')
+    }
+    removeBtn.onclick = function(){
+      box.classList.remove('active')
+    }
+    toggle1Btn.onclick = function(){
+      if(box.classList.contains('active')){
+        box.classList.remove('active')
+      }else{
+        box.classList.add('active')
+      }
+    }
+    toggle2Btn.onclick = function(){
+      box.classList.toggle('active')
+    }
+  </script>
+</body>
+</html>
